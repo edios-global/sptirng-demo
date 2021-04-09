@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+<bean class="com.springcore.springdemo.Manager" name="m1">
+
+<property name="managerName" value="Sunder pichai"/>
+<property name="mangerId" value="1"/>
+</bean>
+
+<bean class="com.springcore.springdemo.Employe" name="emp1" init-method="init" destroy-method="destroy">
+<property name="empId" value="1"/>
+<property name="empName" value="sonu kumar" />
+<property name="empAddress" value="Punjab"/>
+<property name="empManager" ref="m1"/>
+<property name="empFriends">
+<list>
+	<value>1</value>
+	<value>2</value>
+</list>
+
+</property>
+
+<property name="empMobileNumbers">
+<set>
+	<value>456464</value>
+	<value>4544644</value>
+</set>
+
+</property>
+
+<property name="empAdharNumbers">
+<map>
+	<entry key="123456789" value="sonu"/>
+	<entry key="123456789" value="sonu"/>
+	<entry key="123456789" value="sonu"/>
+	<entry key="123456789" value="sonu"/>
+</map>
+
+</property>
+
+</bean>
+</beans>
