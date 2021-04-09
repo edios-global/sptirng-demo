@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+<bean class="com.springcore.springdemo.constructor.Engine" name="e1">
+
+<constructor-arg value="e1"/>
+<constructor-arg value="8"/>
+</bean>
+
+<bean class="com.springcore.springdemo.constructor.Vechicle" name="v1">
+
+<constructor-arg value="10"/>
+<constructor-arg value="sonu"/>
+<constructor-arg  ref="e1"/>
+
+</bean>
+
+</beans>
